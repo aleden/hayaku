@@ -1,2 +1,2 @@
 # hayaku
-Toy programming language compiler
+Toy programming language compiler written by me in high school.

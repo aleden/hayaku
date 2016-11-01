@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{305F5109-5D44-4A0B-9FE9-F89368DDEF58}</ProjectGuid>
+    <RootNamespace>hcVS2010</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Bin\Win32\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Obj\Win32\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Bin\Win32\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Obj\Win32\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <StackReserveSize>100000000</StackReserveSize>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <StackReserveSize>100000000</StackReserveSize>
+      <StackCommitSize>0</StackCommitSize>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Source\GenerateDOTFile.c" />
+    <ClCompile Include="..\Source\GenerateICode.c" />
+    <ClCompile Include="..\Source\ICode.c" />
+    <ClCompile Include="..\Source\InitializationRoutines.c" />
+    <ClCompile Include="..\Source\Link.c" />
+    <ClCompile Include="..\Source\main.c" />
+    <ClCompile Include="..\Source\OptimizeParseTree.c" />
+    <ClCompile Include="..\Source\Symbol.c" />
+    <ClCompile Include="..\Source\yaac.tab.c" />
+    <ClCompile Include="..\Source\GenerateX86Code.c" />
+    <ClCompile Include="..\Source\GenerateX86ICode.c" />
+    <ClCompile Include="..\Source\WritePEFile.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\Software\GnuWin32\bin\Hayaku.l" />
+    <None Include="..\..\..\..\Software\GnuWin32\bin\Hayaku.y" />
+    <None Include="..\Input\source.txt" />
+    <None Include="Log.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Source\Common.h" />
+    <ClInclude Include="..\Source\CompileConfig.h" />
+    <ClInclude Include="..\Source\Function.h" />
+    <ClInclude Include="..\Source\GenerateDOTFile.h" />
+    <ClInclude Include="..\Source\GenerateICode.h" />
+    <ClInclude Include="..\Source\ICode.h" />
+    <ClInclude Include="..\Source\InitializationRoutines.h" />
+    <ClInclude Include="..\Source\Instruction.h" />
+    <ClInclude Include="..\Source\Link.h" />
+    <ClInclude Include="..\Source\OptimizeParseTree.h" />
+    <ClInclude Include="..\Source\ParseNode.h" />
+    <ClInclude Include="..\Source\Parser.h" />
+    <ClInclude Include="..\Source\Symbol.h" />
+    <ClInclude Include="..\Source\Types.h" />
+    <ClInclude Include="..\Source\Variable.h" />
+    <ClInclude Include="..\Source\GenerateX86Code.h" />
+    <ClInclude Include="..\Source\GenerateX86ICode.h" />
+    <ClInclude Include="..\Source\X86ICode.h" />
+    <ClInclude Include="..\Source\PE.h" />
+    <ClInclude Include="..\Source\WritePEFile.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

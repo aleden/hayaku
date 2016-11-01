@@ -1,0 +1,14 @@
+
+/* Init statement */
+StartLoop:
+
+cmp /* Conditional Expression */, 0
+je End
+
+/* Body */
+
+/* Count Statement */
+jmp StartLoop
+
+End:
+nop

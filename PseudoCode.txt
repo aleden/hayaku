@@ -1,0 +1,17 @@
+Lexical Analysis:
+ - New Identifier (Variable)
+1. Add size to the stack alloc
+2. Set the offset to the stack in the Symbol in the symbol table for the variable
+
+Generating code:
+
+- PNT_ASSIGN
+1. Look at the pointer to the Symbol in the symbol table from arg0
+2. Take the offset to the top of the stack
+3. Generate mov instruction to target that offset, with src arg1
+4. Return pointer to the Symbol
+
+- PNT_MUL
+1. Create a new variable in the symbol table, add to the stack alloc
+2. Generate mul instruction for the new variable
+3. Return pointer to new Symbol variable in symbol table

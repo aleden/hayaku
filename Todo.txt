@@ -1,0 +1,39 @@
+1. Seperate key functions (GenerateX to take Functions as inputs, not function table)
+2. Have parse nodes be allocated in the function memory
+3. compile and write true obj files and seperate the linking process
+4. Implement new type of functions which are already compiled (and doesn't have all the extraneous shit)
+	- Just machine code functions
+	- Platform Call
+
+New object file format:
+
+- All addresses (such as to data, functions) are relative offsets from start of file
+- All CALLs address to the function table, not actually the code
+
++ Header
+  - machineArchitecture (IA32/IA64/POWERPC/ARM7)
+  - platform (WINDOWS/LINUX/OSX)
+  - timeStamp
+  - codeAddress
+  - dataAddress
+  - functionTableAddress
+
++ code
+  - size
+  - machineCode[size] // No code alignment
+
++ data
+  - size
+  - data[size]
+
++ functionTable
+  - numFunctions
+  - functions[numFunctions]
+    * name
+    * type
+    ? type == NORMAL
+      + address
+      + size
+    ? type == SHARED_LIB
+      + sharedLibName
+      + callingConvention

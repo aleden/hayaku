@@ -1,0 +1,77 @@
+
+// Main
+
+00401000 >/$ 55             PUSH EBP
+00401001  |. 89E5           MOV EBP,ESP
+00401003  |. 81EC 04000000  SUB ESP,4
+00401009  |. 68 05000000    PUSH 5                                   ; |Arg1 = 00000005
+0040100E  |. E8 0A000000    CALL out.0040101D                        ; \out.0040101D
+00401013  |. 8945 FC        MOV DWORD PTR SS:[EBP-4],EAX
+00401016  |. 8B45 FC        MOV EAX,DWORD PTR SS:[EBP-4]
+00401019  |. C9             LEAVE
+0040101A  \. C2 0400        RETN 4
+
+// Fib
+
+0040101D  /$ 55             PUSH EBP
+0040101E  |. 89E5           MOV EBP,ESP
+00401020  |. 81EC 2C000000  SUB ESP,2C
+
+
+
+0040101D  /$ 55                    PUSH EBP
+0040101E  |. 89E5                  MOV EBP,ESP
+00401020  |. 81EC 2C000000         SUB ESP,2C
+
+if (n == 1)
+{
+00401026  |. 817D 08 01000000      CMP DWORD PTR SS:[EBP+8],1
+0040102D  |. 0F9495 F0FFFFFF       SETE BYTE PTR SS:[EBP-10]
+00401034  |. 817D F0 00000000      CMP DWORD PTR SS:[EBP-10],0
+0040103B  |. 74 07                 JE SHORT out.00401044
+
+return n;
+
+0040103D  |. 8B45 08               MOV EAX,DWORD PTR SS:[EBP+8]
+00401040  |. C9                    LEAVE
+00401041  |. C2 2C00               RETN 2C
+}
+
+if (n == 0)
+{
+00401044  |> 817D 08 00000000      CMP DWORD PTR SS:[EBP+8],0
+0040104B  |. 0F9495 E8FFFFFF       SETE BYTE PTR SS:[EBP-18]
+00401052  |. 817D E8 00000000      CMP DWORD PTR SS:[EBP-18],0
+00401059  |. 74 07                 JE SHORT out.00401062
+
+return n;
+
+0040105B  |. 8B45 08               MOV EAX,DWORD PTR SS:[EBP+8]
+0040105E  |. C9                    LEAVE
+0040105F  |. C2 2C00               RETN 2C
+}
+
+00401062  |> 8B4D 08               MOV ECX,DWORD PTR SS:[EBP+8]             ; ||
+00401065  |. 894D E4               MOV DWORD PTR SS:[EBP-1C],ECX            ; ||
+00401068  |. 816D E4 01000000      SUB DWORD PTR SS:[EBP-1C],1              ; ||
+0040106F  |. 8B4D E4               MOV ECX,DWORD PTR SS:[EBP-1C]            ; ||
+00401072  |. 894D FC               MOV DWORD PTR SS:[EBP-4],ECX             ; ||
+00401075  |. 8B4D 08               MOV ECX,DWORD PTR SS:[EBP+8]             ; ||
+00401078  |. 894D E0               MOV DWORD PTR SS:[EBP-20],ECX            ; ||
+0040107B  |. 816D E0 02000000      SUB DWORD PTR SS:[EBP-20],2              ; ||
+00401082  |. 8B4D E0               MOV ECX,DWORD PTR SS:[EBP-20]            ; ||
+00401085  |. 894D F8               MOV DWORD PTR SS:[EBP-8],ECX             ; ||
+00401088  |. FF75 FC               PUSH DWORD PTR SS:[EBP-4]                ; ||Arg1
+0040108B  |. E8 8DFFFFFF           CALL out.0040101D                        ; |\out.0040101D
+00401090  |. 8945 DC               MOV DWORD PTR SS:[EBP-24],EAX            ; |
+00401093  |. FF75 F8               PUSH DWORD PTR SS:[EBP-8]                ; |Arg1
+00401096  |. E8 82FFFFFF           CALL out.0040101D                        ; \out.0040101D
+0040109B  |. 8945 D8               MOV DWORD PTR SS:[EBP-28],EAX
+0040109E  |. 8B4D DC               MOV ECX,DWORD PTR SS:[EBP-24]
+004010A1  |. 894D D4               MOV DWORD PTR SS:[EBP-2C],ECX
+004010A4  |. 8B4D D8               MOV ECX,DWORD PTR SS:[EBP-28]
+004010A7  |. 014D D4               ADD DWORD PTR SS:[EBP-2C],ECX
+004010AA  |. 8B45 D4               MOV EAX,DWORD PTR SS:[EBP-2C]
+004010AD  |. C9                    LEAVE
+004010AE  \. C2 2C00               RETN 2C
+

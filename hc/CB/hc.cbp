@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="hc" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../Bin/Linux/Debug/hc" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../Obj/Linux/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-x c" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="../Bin/Linux/Release/hc" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../Obj/Linux/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="../Source/Common.h" />
+		<Unit filename="../Source/CompileConfig.h" />
+		<Unit filename="../Source/Function.h" />
+		<Unit filename="../Source/GenerateDOTFile.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../Source/GenerateDOTFile.h" />
+		<Unit filename="../Source/GenerateICode.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../Source/GenerateICode.h" />
+		<Unit filename="../Source/GenerateX86Code.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../Source/GenerateX86Code.h" />
+		<Unit filename="../Source/GenerateX86ICode.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../Source/GenerateX86ICode.h" />
+		<Unit filename="../Source/ICode.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../Source/ICode.h" />
+		<Unit filename="../Source/InitializationRoutines.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../Source/InitializationRoutines.h" />
+		<Unit filename="../Source/Instruction.h" />
+		<Unit filename="../Source/Link.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../Source/Link.h" />
+		<Unit filename="../Source/OptimizeParseTree.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../Source/OptimizeParseTree.h" />
+		<Unit filename="../Source/ParseNode.h" />
+		<Unit filename="../Source/Parser.h" />
+		<Unit filename="../Source/Symbol.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../Source/Symbol.h" />
+		<Unit filename="../Source/Types.h" />
+		<Unit filename="../Source/Variable.h" />
+		<Unit filename="../Source/Win32PE.h" />
+		<Unit filename="../Source/WriteWIN32PEFile.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../Source/WriteWIN32PEFile.h" />
+		<Unit filename="../Source/X86ICode.h" />
+		<Unit filename="../Source/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../Source/yaac.tab.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

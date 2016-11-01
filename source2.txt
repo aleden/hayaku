@@ -1,0 +1,74 @@
+#link "Hayaku.lib"
+
+T FindNull<Pointer T>(T p)
+{
+	while (*p != 0)
+		++p;
+	return p;
+}
+
+abstract Pointer <T>
+{
+	:sizeof == sizeof(UInt);
+
+	inline operator UInt () const
+	{ return addr; }
+
+	T *() = 0;
+	deriv  +  (Int) const = 0;
+	deriv  -  (Int) const = 0;
+	deriv& -= (Int) = 0;
+	deriv& += (Int) = 0;
+};
+
+#define EHANCED_MACRO(ARG)
+{
+	#if ARG == 2
+		MsgBox("Hello!");
+	#else
+		MsgBox("World!");
+	#endif
+}
+
+// You cannot have a instance of an abstract pointer. No polymorphism,
+// just inheritance.
+
+// Here UTF8 inherits a Pointer<UInt32> because a the maximum value of a unicode
+// character will take up 4 bytes (which means it will need a UInt32.
+
+class UTF8 : Pointer<UInt32>
+{
+	UTF8(void* str);
+	UInt v1, v2;
+	UInt32 *()
+};
+
+
+Int Main(UInt argc, ASCII* cmdLnArgs)
+{
+
+
+	*cmdLnArgs.Find(c => c == '!');
+	
+	File f = OpenFile("./test.bin", fm);
+	
+	UInt8 buff[512];
+	
+	DynamicPointer pbin = bin;
+	
+	// from 3rd bit to last bit, set to zero.
+	pbin(3:sizeof(buff)) = 0;
+	
+	// 0th, 1st, 2nd bit
+	pbin++(3) = 101b;
+	
+	bin[0, 40] = FFFFFFh;
+	
+	bin[0] = (bin[0] & 000000ffh) | 12345600h;
+	
+	WriteToFile(buff, sizeof(buff));
+	
+	CloseFile(f);
+	return 0;
+};
+

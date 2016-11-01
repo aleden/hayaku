@@ -1,0 +1,86 @@
+/*
+
+Int LinearInterpolate(Int t1, Int h1, Int t2, Int h2, Int t)
+{
+     return h1 + (t - t1) * ((t2 - t1) / (h2 - h1));
+}
+
+
+
+Int Foo(Int fooa, Int foob, Int fooc)
+{
+	return fooa;
+}
+
+Int R(Int n)
+{
+	if (n == 0)
+	{
+		return 0;
+	}
+
+	return 1 + R(n - 1);
+}
+
+
+Int Fib(Int n)
+{
+	if (n <= 1)
+		return n;
+
+	return Fib(n - 1) + Fib(n - 2);
+}
+
+*/
+
+Int Main(Int8** args)
+{
+	//Int i = (2 - 3) * (6 - 7);
+	//i = LinearInterpolate(1, 2, 3, 4, 5);
+	//i += Foo(1, 2, 3);
+	/*	
+	F0	F1	F2	F3	F4	F5	F6	F7	F8	F9	F10	F11	F12	F13	F14	F15	F16	F17	 F18  F19  F20
+	0	1	1	2	3	5	8	13	21	34	55	89	144	233	377	610	987	1597 2584 4181 6765
+	*/
+
+	// ... - 1, 12 - 144/144 = 1, 13 - 233/234, 14 - 377/389, 610/677
+	
+	
+	/*
+	// WORKS!
+	Int n = 0;
+
+	for (Int i0 = 0; i0 < 10; i0 += 1)
+		for (Int i1 = 0; i1 < 10; i1 += 1)
+			for (Int i2 = 0; i2 < 10; i2 += 1)
+				n += 1;
+	
+	i0 += 1; // Bug
+	*/
+
+	return n; // Should return 10
+}
+
+
+/*
+Int Add(Int a, Int b)
+{
+	//Foo(9, 10, 11);
+	return 5;
+}
+*/
+
+
+
+/*
+void Foo()
+{
+	Int b = 4;
+	Int a = 5 / 2 * b;
+	Int var = 8;
+	
+	Int total = var + b + a;
+
+	return;
+}
+*/

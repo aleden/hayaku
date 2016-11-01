@@ -1,0 +1,11 @@
+4 nested four loops bug: the JMP instruction on the last one jumpss far away 
+
+
+code:
+
+Int n = 0;
+for (Int i0 = 0; i0 < 10; i0 += 1)
+	for (Int i1 = 0; i1 < 10; i1 += 1)
+		for (Int i2 = 0; i2 < 10; i2 += 1)
+			for (Int i3 = 0; i3 < 10; i3 += 1)
+				n += 1;

@@ -1,0 +1,4 @@
+1. Compare lines of code to standard C/C++
+2. Compare compile time
+3. Emphasize on more efficient coding
+   - Easier to achieve many micro-optimizations

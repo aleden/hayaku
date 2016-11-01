@@ -1,0 +1,28 @@
+#define WINDOWS
+
+#ifdef WINDOWS
+namespace WINDOWS
+{
+	[import "Kernel32.dll", STD]
+	UInt WriteConsoleA(UInt hConsoleOutput, const void* lpBuffer,
+	                   UInt nNumberOfCharsToWrite, UInt* lpNumberOfCharsWritten,
+	                   void* lpReserved);
+	
+	[import "Kernel32.dll", STD]
+	UInt GetStdHandle(UInt nStdHandle);
+
+	const Int STD_INPUT_HANDLE = -10;
+	const Int STD_OUTPUT_HANDLE = -11;
+	const Int STD_ERROR_HANDLE = -12;
+}
+#endif
+
+namespace Console
+{
+	void WriteLine(const ASCIIString& s)
+	{
+		#ifdef WINDOWS
+			WINDOWS::WriteConsoleA(GetStdHandle(STD_OUTPUT_HANDLE), s.GetData(), s.GetLength(), 0, 0);
+		#endif
+	}
+}

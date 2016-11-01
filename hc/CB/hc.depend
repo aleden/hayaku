@@ -1,0 +1,323 @@
+# depslib dependency file v1.0
+1267068502 source:/home/edena/Dev/aeden/LarkCompiler/LarkCompiler/GenerateDOT.c
+	"GenerateDOT.h"
+	"ParseNode.h"
+	"Symbol.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1266742971 /home/edena/Dev/aeden/LarkCompiler/LarkCompiler/GenerateDOT.h
+
+1266742971 /home/edena/Dev/aeden/LarkCompiler/LarkCompiler/ParseNode.h
+	"Common.h"
+
+1267062524 /home/edena/Dev/aeden/LarkCompiler/LarkCompiler/Common.h
+	"Types.h"
+	"CompileConfig.h"
+
+1267062524 /home/edena/Dev/aeden/LarkCompiler/LarkCompiler/Types.h
+
+1267068502 /home/edena/Dev/aeden/LarkCompiler/LarkCompiler/CompileConfig.h
+
+1266742971 /home/edena/Dev/aeden/LarkCompiler/LarkCompiler/Symbol.h
+	"Common.h"
+
+1267068502 source:/home/edena/Dev/aeden/LarkCompiler/LarkCompiler/GenerateICode.c
+	"ParseNode.h"
+	"GenerateICode.h"
+	"Symbol.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1266742971 /home/edena/Dev/aeden/LarkCompiler/LarkCompiler/GenerateICode.h
+	"ICode.h"
+
+1266742971 /home/edena/Dev/aeden/LarkCompiler/LarkCompiler/ICode.h
+	"Instruction.h"
+	"Variable.h"
+
+1267062524 /home/edena/Dev/aeden/LarkCompiler/LarkCompiler/Instruction.h
+	"Common.h"
+
+1267062524 /home/edena/Dev/aeden/LarkCompiler/LarkCompiler/Variable.h
+	"Common.h"
+
+1267062524 source:/home/edena/Dev/aeden/LarkCompiler/LarkCompiler/GenerateX86Code.c
+	"GenerateX86Code.h"
+	"GenerateX86ICode.h"
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+
+1266742971 /home/edena/Dev/aeden/LarkCompiler/LarkCompiler/GenerateX86Code.h
+	"Common.h"
+
+1266742971 /home/edena/Dev/aeden/LarkCompiler/LarkCompiler/GenerateX86ICode.h
+	"Common.h"
+	"X86ICode.h"
+
+1267062524 /home/edena/Dev/aeden/LarkCompiler/LarkCompiler/X86ICode.h
+	"Common.h"
+
+1267062524 source:/home/edena/Dev/aeden/LarkCompiler/LarkCompiler/GenerateX86ICode.c
+	"GenerateICode.h"
+	"GenerateX86ICode.h"
+	<stdio.h>
+
+1267068502 source:/home/edena/Dev/aeden/LarkCompiler/LarkCompiler/InitializationRoutines.c
+	"InitializationRoutines.h"
+	"GenerateICode.h"
+	"X86ICode.h"
+	"Symbol.h"
+	"ParseNode.h"
+	<stdio.h>
+	<sys/stat.h>
+	<windows.h>
+
+1267068502 /home/edena/Dev/aeden/LarkCompiler/LarkCompiler/InitializationRoutines.h
+	<stdio.h>
+
+1266742971 source:/home/edena/Dev/aeden/LarkCompiler/LarkCompiler/ParseNode.c
+	"ParseNode.h"
+
+1267062524 source:/home/edena/Dev/aeden/LarkCompiler/LarkCompiler/Symbol.c
+	"Symbol.h"
+	"GenerateICode.h"
+	<string.h>
+
+1267068667 source:/home/edena/Dev/aeden/LarkCompiler/LarkCompiler/WriteWIN32PEFile.c
+	"WriteWIN32PEFile.h"
+	"Win32PE.h"
+
+1266742971 /home/edena/Dev/aeden/LarkCompiler/LarkCompiler/WriteWIN32PEFile.h
+	"Common.h"
+	<stdio.h>
+
+1267066543 /home/edena/Dev/aeden/LarkCompiler/LarkCompiler/Win32PE.h
+
+1266742971 source:/home/edena/Dev/aeden/LarkCompiler/LarkCompiler/X86ICode.c
+	"X86ICode.h"
+
+1267068704 source:/home/edena/Dev/aeden/LarkCompiler/LarkCompiler/main.c
+	<stdio.h>
+	<stdlib.h>
+	"InitializationRoutines.h"
+	"Symbol.h"
+	"ParseNode.h"
+	"GenerateICode.h"
+	"GenerateX86Code.h"
+	"GenerateX86ICode.h"
+	"WriteWIN32PEFile.h"
+	"GenerateDOT.h"
+	<string.h>
+	<stdio.h>
+
+1267062762 source:/home/edena/Dev/aeden/LarkCompiler/LarkCompiler/yaac.tab.c
+	<ctype.h>
+	<stdio.h>
+	<string.h>
+	"Common.h"
+	"Symbol.h"
+	"ParseNode.h"
+	"GenerateICode.h"
+	<stddef.h>
+	<libintl.h>
+	<alloca.h>
+	<malloc.h>
+	<stdlib.h>
+	<stdlib.h>
+	<stdio.h>
+	"lex.yy.c"
+
+1267062762 /home/edena/Dev/aeden/LarkCompiler/LarkCompiler/lex.yy.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<io.h>
+	<stdlib.h>
+	<stdlib.h>
+
+1270152266 source:/media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/GenerateDOTFile.c
+	"GenerateDOTFile.h"
+	"ParseNode.h"
+	"Symbol.h"
+	"ICode.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1271048623 /media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/GenerateDOTFile.h
+	"ParseNode.h"
+	"Symbol.h"
+	"ICode.h"
+
+1269364926 /media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/ParseNode.h
+	"Common.h"
+	"ICode.h"
+
+1270147214 /media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/Common.h
+	"Types.h"
+	"CompileConfig.h"
+
+1269013433 /media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/Types.h
+
+1268106556 /media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/CompileConfig.h
+
+1269463221 /media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/ICode.h
+	"Instruction.h"
+	"Variable.h"
+	"Symbol.h"
+	"Function.h"
+
+1269464316 /media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/Instruction.h
+	"Common.h"
+	"Function.h"
+
+1271048665 /media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/Function.h
+	"Common.h"
+	"Variable.h"
+	"Symbol.h"
+
+1269052784 /media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/Variable.h
+	"Common.h"
+
+1269463966 /media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/Symbol.h
+	"Common.h"
+	"Variable.h"
+
+1270151970 source:/media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/GenerateICode.c
+	"ParseNode.h"
+	"GenerateICode.h"
+	"Symbol.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1268106556 /media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/GenerateICode.h
+	"ICode.h"
+
+1270361002 source:/media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/GenerateX86Code.c
+	"GenerateX86Code.h"
+	"GenerateX86ICode.h"
+	"ICode.h"
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+
+1271048643 /media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/GenerateX86Code.h
+	"Common.h"
+	"ICode.h"
+
+1268106556 /media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/GenerateX86ICode.h
+	"Common.h"
+	"X86ICode.h"
+
+1270872259 /media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/X86ICode.h
+	"Common.h"
+
+1270872340 source:/media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/GenerateX86ICode.c
+	"GenerateICode.h"
+	"GenerateX86ICode.h"
+	<stdio.h>
+	<stdlib.h>
+
+1270361658 source:/media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/ICode.c
+	"ICode.h"
+	<string.h>
+	<stdlib.h>
+
+1271048681 source:/media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/InitializationRoutines.c
+	"InitializationRoutines.h"
+	"X86ICode.h"
+	"ParseNode.h"
+	"Parser.h"
+	"ICode.h"
+	<stdlib.h>
+	<stdio.h>
+	<sys/stat.h>
+
+1268106556 /media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/InitializationRoutines.h
+	"Common.h"
+	<stdio.h>
+
+1268388880 /media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/Parser.h
+
+1270871939 source:/media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/Link.c
+	"Link.h"
+	"ICode.h"
+
+1271048740 /media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/Link.h
+	"Common.h"
+	<stdio.h>
+	"ICode.h"
+
+1269051202 source:/media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/OptimizeParseTree.c
+	"OptimizeParseTree.h"
+	"ParseNode.h"
+	<stdio.h>
+
+1268106556 /media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/OptimizeParseTree.h
+
+1270149741 source:/media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/Symbol.c
+	"Symbol.h"
+	"GenerateICode.h"
+	<string.h>
+
+1270361139 source:/media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/WriteWIN32PEFile.c
+	"WriteWIN32PEFile.h"
+	"Win32PE.h"
+	"Link.h"
+	"ICode.h"
+	<string.h>
+	<malloc.h>
+
+1271048771 /media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/WriteWIN32PEFile.h
+	"Common.h"
+	<stdio.h>
+	"Link.h"
+	"ICode.h"
+
+1268843131 /media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/Win32PE.h
+
+1270153275 source:/media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/main.c
+	"InitializationRoutines.h"
+	"Parser.h"
+	"Symbol.h"
+	"ParseNode.h"
+	"GenerateICode.h"
+	"GenerateX86Code.h"
+	"GenerateX86ICode.h"
+	"WriteWIN32PEFile.h"
+	"GenerateDOTFile.h"
+	"Link.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+
+1270954408 source:/media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/yaac.tab.c
+	"Common.h"
+	"ICode.h"
+	"ParseNode.h"
+	"Variable.h"
+	<stdio.h>
+	<string.h>
+	<stddef.h>
+	<libintl.h>
+	<alloca.h>
+	<malloc.h>
+	<stdlib.h>
+	<stdlib.h>
+	<stdio.h>
+	"lex.yy.c"
+
+1270145544 /media/D828FD9628FD73BA/Dev/Hayaku/hc/Source/lex.yy.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<io.h>
+	<stdlib.h>
+	<stdlib.h>
+

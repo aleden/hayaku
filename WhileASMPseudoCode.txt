@@ -1,0 +1,15 @@
+
+StartLoop:
+
+cmp [EBP - 24] /* If cond expr */, 0
+je End
+
+/* <Body> */
+
+
+/* </Body> */
+
+jmp StartLoop
+
+End:
+nop

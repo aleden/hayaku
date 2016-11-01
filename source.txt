@@ -1,0 +1,12 @@
+int Main(int argc, char** argv)
+{
+	// We will set j to zero, then add two to it.
+	int j = 0;
+	j += 2;
+	
+	// Now we will minus four from j
+	j -= 4;
+	
+	//Console.Print(ToUTF8(j));
+	return 0;
+}
